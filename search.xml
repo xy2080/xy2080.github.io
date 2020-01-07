@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>VM安装Mac系统</title>
+    <url>/2020/01/07/VM%E5%AE%89%E8%A3%85Mac%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>VM15.5.0安装以及Mac系统的安装</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="一、安装虚拟机"><a href="#一、安装虚拟机" class="headerlink" title="一、安装虚拟机"></a>一、安装虚拟机</h2><h5 id="1-下载VM15-5-0安装包"><a href="#1-下载VM15-5-0安装包" class="headerlink" title="1.下载VM15.5.0安装包"></a>1.下载VM15.5.0安装包</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/01.png" alt="图片"></p>
+<h5 id="2-鼠标右击【VMware-15-5-0】压缩包选择【解压到VMware-15-5-0】。"><a href="#2-鼠标右击【VMware-15-5-0】压缩包选择【解压到VMware-15-5-0】。" class="headerlink" title="2.鼠标右击【VMware 15.5.0】压缩包选择【解压到VMware 15.5.0】。"></a>2.鼠标右击【VMware 15.5.0】压缩包选择【解压到VMware 15.5.0】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/02.png" alt="图片"></p>
+<h5 id="3-双击打开解压后的【VMware-15-5-0】文件夹。"><a href="#3-双击打开解压后的【VMware-15-5-0】文件夹。" class="headerlink" title="3.双击打开解压后的【VMware 15.5.0】文件夹。"></a>3.双击打开解压后的【VMware 15.5.0】文件夹。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/03.png" alt="图片"></p>
+<h5 id="4-鼠标右击【VMware-15-5-0】选择【以管理员身份运行】。"><a href="#4-鼠标右击【VMware-15-5-0】选择【以管理员身份运行】。" class="headerlink" title="4.鼠标右击【VMware 15.5.0】选择【以管理员身份运行】。"></a>4.鼠标右击【VMware 15.5.0】选择【以管理员身份运行】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/04.png" alt="图片"></p>
+<h5 id="5-正在准备中。"><a href="#5-正在准备中。" class="headerlink" title="5.正在准备中。"></a>5.正在准备中。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/05.png" alt="图片"></p>
+<h5 id="6-点击【下一步】。"><a href="#6-点击【下一步】。" class="headerlink" title="6.点击【下一步】。"></a>6.点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/06.png" alt="图片"></p>
+<h5 id="7-勾选【我接受许可协议中的条款】，然后点击【下一步】。"><a href="#7-勾选【我接受许可协议中的条款】，然后点击【下一步】。" class="headerlink" title="7.勾选【我接受许可协议中的条款】，然后点击【下一步】。"></a>7.勾选【我接受许可协议中的条款】，然后点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/07.png" alt="图片"></p>
+<h5 id="8-点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。"><a href="#8-点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。" class="headerlink" title="8.点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。"></a>8.点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/08.png" alt="图片"></p>
+<h5 id="9-取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。"><a href="#9-取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。" class="headerlink" title="9.取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。"></a>9.取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/09.png" alt="图片"></p>
+<h5 id="10-点击【下一步】。"><a href="#10-点击【下一步】。" class="headerlink" title="10.点击【下一步】。"></a>10.点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/10.png" alt="图片"></p>
+<h5 id="11-点击【安装】。"><a href="#11-点击【安装】。" class="headerlink" title="11.点击【安装】。"></a>11.点击【安装】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/11.png" alt="图片"></p>
+<h5 id="12-安装中。"><a href="#12-安装中。" class="headerlink" title="12.安装中。"></a>12.安装中。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/12.png" alt="图片"></p>
+<h5 id="13-点击【许可证】。"><a href="#13-点击【许可证】。" class="headerlink" title="13.点击【许可证】。"></a>13.点击【许可证】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/13.png" alt="图片"></p>
+<h5 id="14-许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。"><a href="#14-许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。" class="headerlink" title="14.许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。"></a>14.许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/14.png" alt="图片"></p>
+<h5 id="15-点击【完成】。"><a href="#15-点击【完成】。" class="headerlink" title="15.点击【完成】。"></a>15.点击【完成】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/15.png" alt="图片"></p>
+<h2 id="二、虚拟机内安装Mac系统"><a href="#二、虚拟机内安装Mac系统" class="headerlink" title="二、虚拟机内安装Mac系统"></a>二、虚拟机内安装Mac系统</h2><h5 id="16-解锁VM"><a href="#16-解锁VM" class="headerlink" title="16.解锁VM"></a>16.解锁VM</h5><h6 id="16-1-解锁VM-支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装"><a href="#16-1-解锁VM-支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装" class="headerlink" title="16.1.解锁VM,支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装"></a>16.1.解锁VM,支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装</h6><h6 id="16-2-首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功"><a href="#16-2-首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功" class="headerlink" title="16.2.首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功"></a>16.2.首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/16.png" alt="图片"></p>
+<h6 id="16-3-打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭"><a href="#16-3-打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭" class="headerlink" title="16.3.打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭"></a>16.3.打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/17.png" alt="图片"></p>
+<h5 id="17-在虚拟机上安装Mac系统"><a href="#17-在虚拟机上安装Mac系统" class="headerlink" title="17.在虚拟机上安装Mac系统"></a>17.在虚拟机上安装Mac系统</h5><h6 id="17-1-第一步，选择“创建新的虚拟机”"><a href="#17-1-第一步，选择“创建新的虚拟机”" class="headerlink" title="17.1.第一步，选择“创建新的虚拟机”"></a>17.1.第一步，选择“创建新的虚拟机”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/18.png" alt="图片"></p>
+<h6 id="17-2-第二步，选择“典型”，点击“下一步”"><a href="#17-2-第二步，选择“典型”，点击“下一步”" class="headerlink" title="17.2.第二步，选择“典型”，点击“下一步”"></a>17.2.第二步，选择“典型”，点击“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/19.png" alt="图片"></p>
+<h6 id="17-3-选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”"><a href="#17-3-选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”" class="headerlink" title="17.3.选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”"></a>17.3.选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/20.png" alt="图片"></p>
+<h6 id="17-4-选择Mac的操作系统，选择“macOS-10-14”版本，选择“下一步”"><a href="#17-4-选择Mac的操作系统，选择“macOS-10-14”版本，选择“下一步”" class="headerlink" title="17.4.选择Mac的操作系统，选择“macOS 10.14”版本，选择“下一步”"></a>17.4.选择Mac的操作系统，选择“macOS 10.14”版本，选择“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/21.png" alt="图片"></p>
+<h6 id="17-5-选择系统安装的磁盘，点击“下一步”"><a href="#17-5-选择系统安装的磁盘，点击“下一步”" class="headerlink" title="17.5.选择系统安装的磁盘，点击“下一步”"></a>17.5.选择系统安装的磁盘，点击“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/22.png" alt="图片"></p>
+<h6 id="17-6-根据磁盘的大小，设置给该系统分配的大小，选择“下一步”"><a href="#17-6-根据磁盘的大小，设置给该系统分配的大小，选择“下一步”" class="headerlink" title="17.6.根据磁盘的大小，设置给该系统分配的大小，选择“下一步”"></a>17.6.根据磁盘的大小，设置给该系统分配的大小，选择“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/23.png" alt="图片"></p>
+<h6 id="17-7-可以根据电脑的配置，设置合适的硬件设备的资源分配"><a href="#17-7-可以根据电脑的配置，设置合适的硬件设备的资源分配" class="headerlink" title="17.7.可以根据电脑的配置，设置合适的硬件设备的资源分配"></a>17.7.可以根据电脑的配置，设置合适的硬件设备的资源分配</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/24.png" alt="图片"></p>
+<h6 id="17-8-在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的"><a href="#17-8-在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的" class="headerlink" title="17.8.在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的"></a>17.8.在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/25.png" alt="图片"></p>
+<h6 id="17-9-设置USB控制器，将USB兼容性更改为：USB-2-0-显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示"><a href="#17-9-设置USB控制器，将USB兼容性更改为：USB-2-0-显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示" class="headerlink" title="17.9.设置USB控制器，将USB兼容性更改为：USB 2.0,显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示"></a>17.9.设置USB控制器，将USB兼容性更改为：USB 2.0,显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/26.png" alt="图片"></p>
+<h6 id="17-10-开启虚拟机，在磁盘上安装Mac的操作系统"><a href="#17-10-开启虚拟机，在磁盘上安装Mac的操作系统" class="headerlink" title="17.10.开启虚拟机，在磁盘上安装Mac的操作系统"></a>17.10.开启虚拟机，在磁盘上安装Mac的操作系统</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/27.png" alt="图片"><br><font color="red">注意：20G磁盘容量太小，应将磁盘设置最小40G</font></p>
+<h6 id="17-11-语言选择“简体中文”，点击“右指向”"><a href="#17-11-语言选择“简体中文”，点击“右指向”" class="headerlink" title="17.11.语言选择“简体中文”，点击“右指向”"></a>17.11.语言选择“简体中文”，点击“右指向”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/28.png" alt="图片"></p>
+<h6 id="17-12-前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”"><a href="#17-12-前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”" class="headerlink" title="17.12.前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”"></a>17.12.前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/29.png" alt="图片"></p>
+<h6 id="17-13-选择“使用工具”，“磁盘工具”"><a href="#17-13-选择“使用工具”，“磁盘工具”" class="headerlink" title="17.13.选择“使用工具”，“磁盘工具”"></a>17.13.选择“使用工具”，“磁盘工具”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/30.png" alt="图片"></p>
+<h6 id="17-14-选择在安装时给系统分配的磁盘，选择”抹掉”-将磁盘转换成Mac识别的格式"><a href="#17-14-选择在安装时给系统分配的磁盘，选择”抹掉”-将磁盘转换成Mac识别的格式" class="headerlink" title="17.14.选择在安装时给系统分配的磁盘，选择”抹掉”,将磁盘转换成Mac识别的格式"></a>17.14.选择在安装时给系统分配的磁盘，选择”抹掉”,将磁盘转换成Mac识别的格式</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/31.png" alt="图片"></p>
+<h6 id="17-15-格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“"><a href="#17-15-格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“" class="headerlink" title="17.15.格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“"></a>17.15.格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/32.png" alt="图片"></p>
+<h6 id="17-16-选择刚格式化的磁盘，点击“继续”"><a href="#17-16-选择刚格式化的磁盘，点击“继续”" class="headerlink" title="17.16.选择刚格式化的磁盘，点击“继续”"></a>17.16.选择刚格式化的磁盘，点击“继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/33.png" alt="图片"></p>
+<h6 id="17-17-等待安装"><a href="#17-17-等待安装" class="headerlink" title="17.17.等待安装"></a>17.17.等待安装</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/34.png" alt="图片"></p>
+<h6 id="17-18-安装结束后，地区选择”中国”，点击”继续”"><a href="#17-18-安装结束后，地区选择”中国”，点击”继续”" class="headerlink" title="17.18.安装结束后，地区选择”中国”，点击”继续”;"></a>17.18.安装结束后，地区选择”中国”，点击”继续”;</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/35.png" alt="图片"></p>
+<h6 id="17-19-键盘配置，选择”继续”"><a href="#17-19-键盘配置，选择”继续”" class="headerlink" title="17.19.键盘配置，选择”继续”"></a>17.19.键盘配置，选择”继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/36.png" alt="图片"></p>
+<h6 id="17-20-选择”不传输任何数据”-选择”继续”"><a href="#17-20-选择”不传输任何数据”-选择”继续”" class="headerlink" title="17.20.选择”不传输任何数据”,选择”继续”"></a>17.20.选择”不传输任何数据”,选择”继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/37.png" alt="图片"></p>
+<h6 id="17-21-登陆苹果ID-若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“"><a href="#17-21-登陆苹果ID-若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“" class="headerlink" title="17.21.登陆苹果ID,若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“"></a>17.21.登陆苹果ID,若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/38.png" alt="图片"></p>
+<h6 id="17-22-创建电脑账户，密码设置不少于4位-2080-选择”继续”"><a href="#17-22-创建电脑账户，密码设置不少于4位-2080-选择”继续”" class="headerlink" title="17.22.创建电脑账户，密码设置不少于4位(2080),选择”继续”"></a>17.22.创建电脑账户，密码设置不少于4位(2080),选择”继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/39.png" alt="图片"></p>
+<h6 id="17-23-将桌面上的系统盘推出"><a href="#17-23-将桌面上的系统盘推出" class="headerlink" title="17.23.将桌面上的系统盘推出"></a>17.23.将桌面上的系统盘推出</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/40.png" alt="图片"></p>
+<h5 id="18-解决Mac系统分辨率率较低问题"><a href="#18-解决Mac系统分辨率率较低问题" class="headerlink" title="18.解决Mac系统分辨率率较低问题"></a>18.解决Mac系统分辨率率较低问题</h5><h6 id="18-1-安装VMware-Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，"><a href="#18-1-安装VMware-Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，" class="headerlink" title="18.1.安装VMware Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，"></a>18.1.安装VMware Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/41.png" alt="图片"></p>
+<h6 id="18-2-另外下载文件并安装-底部网盘链接"><a href="#18-2-另外下载文件并安装-底部网盘链接" class="headerlink" title="18.2.另外下载文件并安装(底部网盘链接)"></a>18.2.另外下载文件并安装(底部网盘链接)</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/42.png" alt="图片"></p>
+<blockquote>
+<p>Mac系统下载地址：链接：<a href="https://pan.baidu.com/s/1ImTLwIIf5zt2VNzL8oYeJA" target="_blank" rel="noopener">https://pan.baidu.com/s/1ImTLwIIf5zt2VNzL8oYeJA</a><br>提取码：cjoo</p>
+</blockquote>
+<blockquote>
+<p>VM Tools工具下载：链接：<a href="https://pan.baidu.com/s/1WVcX4lXGAbO3GD6Uipm1NQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1WVcX4lXGAbO3GD6Uipm1NQ</a><br>提取码：m06a<br>复制这段内容后打开百度网盘手机App，操作更方便哦</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>虚拟机</category>
+      </categories>
+      <tags>
+        <tag>VM</tag>
+        <tag>Mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>事件的监听与广播</title>
+    <url>/2020/01/02/%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%9B%91%E5%90%AC%E4%B8%8E%E5%B9%BF%E6%92%AD/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>解决代码之间耦合性的系统</p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<h2 id="一-Button按钮动态添加响应事件的两种形式"><a href="#一-Button按钮动态添加响应事件的两种形式" class="headerlink" title="一.Button按钮动态添加响应事件的两种形式"></a>一.Button按钮动态添加响应事件的两种形式</h2><blockquote>
+<p>Button.onClick.AddListener(事件名称);<br>Button.onClick.AddListener(<br>()=&gt;<br>{<br>//方法体<br>}<br>);</p>
+</blockquote>
+<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><h4 id="1-定义有参和无参的委托事件"><a href="#1-定义有参和无参的委托事件" class="headerlink" title="1.定义有参和无参的委托事件"></a>1.定义有参和无参的委托事件</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/01.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-定义委托的事件码"><a href="#2-定义委托的事件码" class="headerlink" title="2.定义委托的事件码"></a>2.定义委托的事件码</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/02.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-1-定义字典用来存储事件码及其对应的委托"><a href="#3-1-定义字典用来存储事件码及其对应的委托" class="headerlink" title="3.1.定义字典用来存储事件码及其对应的委托"></a>3.1.定义字典用来存储事件码及其对应的委托</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/03.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-2-添加监听，先判断字典中是否已存在该类型的事件码所对应的事件，判断已有的事件与添加的事件是否一致，最后添加监听"><a href="#3-2-添加监听，先判断字典中是否已存在该类型的事件码所对应的事件，判断已有的事件与添加的事件是否一致，最后添加监听" class="headerlink" title="3.2.添加监听，先判断字典中是否已存在该类型的事件码所对应的事件，判断已有的事件与添加的事件是否一致，最后添加监听"></a>3.2.添加监听，先判断字典中是否已存在该类型的事件码所对应的事件，判断已有的事件与添加的事件是否一致，最后添加监听</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/04.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-3-移除监听-判断字典中是否有该事件码对应的委托，以及已有的委托与要移除的委托类型是否一致，最后移除监听"><a href="#3-3-移除监听-判断字典中是否有该事件码对应的委托，以及已有的委托与要移除的委托类型是否一致，最后移除监听" class="headerlink" title="3.3.移除监听  判断字典中是否有该事件码对应的委托，以及已有的委托与要移除的委托类型是否一致，最后移除监听"></a>3.3.移除监听  判断字典中是否有该事件码对应的委托，以及已有的委托与要移除的委托类型是否一致，最后移除监听</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/05.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-4-广播系统-根据事件码找到字典中对应的委托，-并调用委托事件"><a href="#3-4-广播系统-根据事件码找到字典中对应的委托，-并调用委托事件" class="headerlink" title="3.4.广播系统   根据事件码找到字典中对应的委托， 并调用委托事件"></a>3.4.广播系统   根据事件码找到字典中对应的委托， 并调用委托事件</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/06.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-5-对某事件添加委托"><a href="#3-5-对某事件添加委托" class="headerlink" title="3.5.对某事件添加委托"></a>3.5.对某事件添加委托</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/07.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-6-广播系统开始广播，调用对应的委托"><a href="#3-6-广播系统开始广播，调用对应的委托" class="headerlink" title="3.6.广播系统开始广播，调用对应的委托"></a>3.6.广播系统开始广播，调用对应的委托</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/08.png" alt="图片"></p>
+</blockquote>
+<h4 id="4-多个参数的实现"><a href="#4-多个参数的实现" class="headerlink" title="4.多个参数的实现"></a>4.多个参数的实现</h4><h4 id="4-1-添加监听"><a href="#4-1-添加监听" class="headerlink" title="4.1.添加监听"></a>4.1.添加监听</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/09.png" alt="图片"></p>
+</blockquote>
+<h4 id="4-2-移除监听"><a href="#4-2-移除监听" class="headerlink" title="4.2.移除监听"></a>4.2.移除监听</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/10.png" alt="图片"></p>
+</blockquote>
+<h4 id="4-3-广播系统"><a href="#4-3-广播系统" class="headerlink" title="4.3.广播系统"></a>4.3.广播系统</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/11.png" alt="图片"></p>
+</blockquote>
+<h4 id="4-4-指定有参委托事件"><a href="#4-4-指定有参委托事件" class="headerlink" title="4.4.指定有参委托事件"></a>4.4.指定有参委托事件</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/12.png" alt="图片"></p>
+</blockquote>
+<h4 id="4-5-发起广播"><a href="#4-5-发起广播" class="headerlink" title="4.5.发起广播"></a>4.5.发起广播</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-4/13.png" alt="图片"></p>
+</blockquote>
+<h4 id="5-弊端："><a href="#5-弊端：" class="headerlink" title="5.弊端："></a>5.弊端：</h4><p>当事件的泛型有多个参数时，参数的顺序不能乱，每一事件码只能对应一种参数或事件的</p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>解耦合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lua</title>
+    <url>/2019/12/24/Lua/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>Lua 是一种轻量小巧的脚本语言，用标准C语言编写并以源代码形式开放， 其设计目的是为了嵌入应用程序中，从而为应用程序提供灵活的扩展和定制功能</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="一、Lua"><a href="#一、Lua" class="headerlink" title="一、Lua"></a>一、Lua</h2><h4 id="1-Lua特性"><a href="#1-Lua特性" class="headerlink" title="1.Lua特性"></a>1.Lua特性</h4><blockquote>
+<ul>
+<li>轻量级: 它用标准C语言编写并以源代码形式开放，编译后仅仅一百余K，可以很方便的嵌入别的程序里。</li>
+<li>可扩展: Lua提供了非常易于使用的扩展接口和机制：由宿主语言(通常是C或C++)提供这些功能，Lua可以使用它们，就像是本来就内置的功能一样。</li>
+</ul>
+</blockquote>
+<h4 id="2-Lua-应用场景"><a href="#2-Lua-应用场景" class="headerlink" title="2.Lua 应用场景"></a>2.Lua 应用场景</h4><blockquote>
+<ul>
+<li>游戏开发</li>
+<li>独立应用脚本</li>
+<li>Web 应用脚本</li>
+<li>扩展和数据库插件如：MySQL Proxy 和 MySQL WorkBench</li>
+<li>安全系统，如入侵检测系统</li>
+</ul>
+</blockquote>
+<h2 id="二、XLua"><a href="#二、XLua" class="headerlink" title="二、XLua"></a>二、XLua</h2><h4 id="1-XLua功能概述"><a href="#1-XLua功能概述" class="headerlink" title="1.XLua功能概述"></a>1.XLua功能概述</h4><blockquote>
+<p>xLua为Unity、 .Net、 Mono等C#环境增加Lua脚本编程的能力，借助xLua，这些Lua代码可以方便的和C#相互调用</p>
+</blockquote>
+<h4 id="2-XLua特点"><a href="#2-XLua特点" class="headerlink" title="2.XLua特点"></a>2.XLua特点</h4><blockquote>
+<ul>
+<li>可以运行时把C#实现（方法，操作符，属性，事件等等）替换成lua实现；</li>
+<li>出色的GC优化，自定义struct，枚举在Lua和C#间传递无C# gc alloc；</li>
+<li>编辑器下无需生成代码，开发更轻量；</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Lua</category>
+      </categories>
+      <tags>
+        <tag>Lua</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity</title>
+    <url>/2019/12/24/Unity/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>Unity3D是由Unity Technologies开发的一个让玩家轻松创建诸如三维视频游戏、建筑可视化、实时三维动画等类型互动内容的多平台的综合型游戏开发工具，是一个全面整合的专业游戏引擎。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="一、Unity"><a href="#一、Unity" class="headerlink" title="一、Unity"></a>一、Unity</h2><blockquote>
+<p>Unity 3D 可以运行在 Windows 和MacOS X 下，可发布游戏至 Windows、Mac、Wii、iPhone、WebGL（需要 HTML5）、Windows Phone 8 和 Android 平台。也可以利用 Unity Web Player 插件发布网页游戏，支持 Mac 和 Windows 平台的网页浏览，是一个全面整合的专业游戏引擎。<br>适用范围：3D、2D、VR、AR<br>代表作：<br>王者荣耀、炉石传说</p>
+</blockquote>
+<h4 id="1-发展史"><a href="#1-发展史" class="headerlink" title="1.发展史"></a>1.发展史</h4><pre><code>2004 年，Unity 3D 诞生于丹麦的阿姆斯特丹。
+2005 年，发布了 Unity 1.0 版本，此版本只能应用于 Mac 平台，主要针对 Web 项目和 VR（虚拟现实）的开发。
+2008 年，推出 Windows 版本，并开始支持 iOS 和 Wii，从众多的游戏引擎中脱颖而出。
+2009 年，荣登 2009 年游戏引擎的前五，此时 Unity 的注册人数已经达到了 3.5 万。
+2010 年，Unity 3D 开始支持 Android，继续扩大影响力。
+2011 年，开始支持 PS3 和 XBox360，此时全平台的构建完成。
+2012 年，Unity Technologies 公司正式推出 Unity 4.0 版本，新加入对于 DirectX 11 的支持和 Mecanim 动画工具，以及为用户提供 Linux 及 Adobe Flash Player 的部署预览功能。
+2013 年，Unity 3D 引擎覆盖了越来越多的国家，全球用户已经超过 150 万，Unity 4.0 引擎已经能够支持在包括 MacOS X、Android、iOS、Windows 等在内的 10 个平台上发布游戏。同时，Unity Technologies 公司 CEO David Helgason 发布消息称，游戏引擎 Unity 3D 今后将不再支持 Flash 平台，且不再销售针对 Flash 开发者的软件授权。
+2014 年，发布 Unity 4.6 版本，更新了屏幕自动旋转等功能。
+2016 年，发布 Unity 5.4 版本，专注于新的视觉功能，为开发人员提供了最新的理想实验和原型功能模式，极大地提高了其在 VR 画面展现上的性能。
+2017年，发布 Unity217.X版本，大范围的优化和增加更多的功能，Unity承诺将进一步面向非程序员，为设计师和艺术家设计一系列功能。 
+2018年，发布 Unity2018.x版本，主要新特性是对新的XR平台的扩展支持，平台包括Magic leap，谷歌独立Daydream头显和谷歌Play Instant
+2019年，发布 Unity2019.x版本，主要特性是全新的输入系统、Universal Render Pipeline通用渲染管线中的后期处理功能、物理更新、更快的编辑器内迭代过程，以及Unity光线追踪功能。</code></pre><h4 id="2-特性"><a href="#2-特性" class="headerlink" title="2.特性"></a>2.特性</h4><pre><code>(1).跨平台。游戏开发者可以通过不同的平台进行开发。游戏制作完成后，游戏无需任何修改即可直接一键发布到常用的主流平台上。
+(2).综合编辑。Unity 3D 的用户界面具备视觉化编辑、详细的属性编辑器和动态游戏预览特性
+(3).资源导入。项目可以自动导入资源，并根据资源的改动自动更新
+(4).一键部署。Unity 3D 只需一键即可完成作品的多平台开发和部署，让开发者的作品在多平台呈现
+(5).脚本语言。Unity 3D 集成了 MonoDeveloper 编译平台，支持 C#、JavaScript 和 Boo 3 种脚本语言，其中 C# 和 JavaScript 是在游戏开发中最常用的脚本语言
+(6).联网。Unity 3D 支持从单机应用到大型多人联网游戏的开发
+(7).着色器。Unity 3D 着色器系统整合了易用性、灵活性、高性能
+(8).地形编辑器。Unity 3D 内置强大的地形编辑系统，该系统可使游戏开发者实现游戏中任何复杂的地形，支持地形创建和树木与植被贴片，支持自动的地形 LOD、水面特效，尤其是低端硬件亦可流畅运行广阔茂盛的植被景观，能够方便地创建游戏场景中所用到的各种地形
+(9).物理特效。物理引擎是模拟牛顿力学模型的计算机程序，其中使用了质量、速度、摩擦力和空气阻力等变量。Unity 3D 内置 NVIDIA 的 PhysX 物理引擎，游戏开发者可以用高效、逼真、生动的方式复原和模拟真实世界中的物理效果，例如碰撞检测、弹簧效果、布料效果、重力效果等
+(10).光影。Unity 3D 提供了具有柔和阴影以及高度完善的烘焙效果的光影渲染系统</code></pre><h2 id="二、Unreal"><a href="#二、Unreal" class="headerlink" title="二、Unreal"></a>二、Unreal</h2><blockquote>
+<p>虚幻引擎是一套完整的创新、设计工具，能够满足艺术家的野心和愿景，同时也具备足够的灵活性，可满足不同规模的开发团队需求。目前虚幻引擎已经发展到了虚幻4。虚幻4以美术效果见长，许多PC大作都是使用虚幻4开发的。虚幻4更适合开发对画面效果要求非常高的大型游戏。<br>适用范围： 3D，VR，AR<br>代表作：<br>绝地求生端游及手游</p>
+</blockquote>
+<h2 id="三、Coscos-国人开发"><a href="#三、Coscos-国人开发" class="headerlink" title="三、Coscos(国人开发)"></a>三、Coscos(国人开发)</h2><blockquote>
+<p>Cocos2d-x 是一套开源的跨平台游戏开发框架。引擎核心采用C++编写，提供C++、Lua、JavaScript三种编程语言接口。引擎中提供了图形渲染、GUI、音频、网络、物理、用户输入等丰富的功能。Cocos2d-x 适配 iOS, Android, HTML5，PC Windows 和 macOS X 系统，功能侧重在手机原生和HTML5 两大领域，并积极向 3D 领域延伸扩展。<br>使用范围：2D游戏<br>代表作：捕鱼达人</p>
+</blockquote>
+<h2 id="四、引擎"><a href="#四、引擎" class="headerlink" title="四、引擎"></a>四、引擎</h2><h4 id="1-20种引擎的Logo"><a href="#1-20种引擎的Logo" class="headerlink" title="1.20种引擎的Logo"></a>1.20种引擎的Logo</h4><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/01.png" alt="图片"></p>
+<h4 id="2-Unity、Unreal和Coscos的对比"><a href="#2-Unity、Unreal和Coscos的对比" class="headerlink" title="2.Unity、Unreal和Coscos的对比"></a>2.Unity、Unreal和Coscos的对比</h4><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/02.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/03.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/04.png" alt="图片"></p>
+<h3 id="游戏开发引擎常见约有20种，从引擎的综合特性和市场人才需求上来说，强烈推荐Unity引擎"><a href="#游戏开发引擎常见约有20种，从引擎的综合特性和市场人才需求上来说，强烈推荐Unity引擎" class="headerlink" title="游戏开发引擎常见约有20种，从引擎的综合特性和市场人才需求上来说，强烈推荐Unity引擎"></a>游戏开发引擎常见约有20种，从引擎的综合特性和市场人才需求上来说，强烈推荐Unity引擎</h3>]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VR</title>
+    <url>/2019/12/24/VR/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>VR是Virtual Reality的缩写，中文的意思就是虚拟现实，早期译为“灵境技术”。虚拟现实是多媒体技术的终极应用形式，它是计算机软硬件技术、传感技术、机器人技术、人工智能及行为心理学等科学领域飞速发展的结晶。主要依赖于三维实时图形显示、三维定位跟踪、触觉及嗅觉传感技术、人工智能技术、高速计算与并行计算技术以及人的行为学研究等多项关键技术的发展。随着虚拟现实技术的发展，真正地实现虚拟现实，将引起整个人类生活与发展的很大变革。人们戴上立体眼镜、数据手套等特制的传感设备，面对一种三维的模拟现实，似乎置身于一个具有三维的视觉、听觉、触觉甚至嗅觉的感觉世界，并且人与这个环境可以通过人的自然技能和相应的设施进行信息交互。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="1-诞生"><a href="#1-诞生" class="headerlink" title="1.诞生"></a>1.诞生</h3><blockquote>
+<p>在此之前，虚拟现实的概念早在二十世纪六十年代已经存在，但是并没有运用到游戏技术里，直到现代的硬件设备足以支持后，最早在某论坛由后来的Oculus开发人员、shenx、著名的吃豆人开发者岩谷彻等人提出</p>
+</blockquote>
+<h3 id="2-”爆发式”发展"><a href="#2-”爆发式”发展" class="headerlink" title="2.”爆发式”发展"></a>2.”爆发式”发展</h3><blockquote>
+<p>2016 年被行业和媒体称为 VR 爆发的元年，包括游戏、应用、影视和直播等内容的创作开发资源源源不断地进入这个行业，到处都彰显着这个行业会在未来一段时间里井喷式发展。</p>
+</blockquote>
+<h3 id="3-VR游戏的曙光"><a href="#3-VR游戏的曙光" class="headerlink" title="3.VR游戏的曙光"></a>3.VR游戏的曙光</h3><blockquote>
+<p>2018年虚拟现实、增强现实和MR gaming的合并带来了66亿美元的收入。在同一时期，游戏产业作为一个整体创造了近1350亿美元的收入。但是，2019年发售的绝大多数游戏无论是新发行的游戏还是消费者买单的游戏都是非VR游戏。从一些数据上来看，未来还是可期的，今年3月，索尼宣布已售出420万台PlayStation VR头盔。截至今年夏天，PlayStation 4的销量已超过1亿台。</p>
+</blockquote>
+<h3 id="4-VR游戏优缺点"><a href="#4-VR游戏优缺点" class="headerlink" title="4.VR游戏优缺点"></a>4.VR游戏优缺点</h3><blockquote>
+<p>优点：沉浸感强、互动性强、新颖有科技感。<br>劣势：VR资源较少、设备昂贵、使用场景限制、眩晕感。</p>
+</blockquote>
+<h3 id="5-VR游戏的前景"><a href="#5-VR游戏的前景" class="headerlink" title="5.VR游戏的前景"></a>5.VR游戏的前景</h3><blockquote>
+<p>有业内人士预计，到2020年VR游戏玩家数量将达到7000万，2025年VR游戏玩家数量将达到2.16亿。虽然目前VR游戏发展还不成熟，甚至没有特别优秀的VR游戏作品，VR游戏在技术、设备和用户体验上还有很长的路要走，但是这个市场的潜力是巨大的，如果现在能抓住时机，那么在未来的市场发展中一定会站稳脚跟！</p>
+</blockquote>
+<h3 id="6-VR技术的应用"><a href="#6-VR技术的应用" class="headerlink" title="6.VR技术的应用"></a>6.VR技术的应用</h3><pre><code>VR+军事
+VR+医疗
+VR+教育
+VR+犯罪现场
+VR+城市规划
+VR+房地产
+VR+旅游
+VR+新闻
+VR+影视
+VR+直播
+VR+游戏</code></pre>]]></content>
+      <categories>
+        <category>VR</category>
+      </categories>
+      <tags>
+        <tag>VR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>XLua入门</title>
+    <url>/2019/12/23/XLua%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>xLua为Unity、 .Net、 Mono等C#环境增加Lua脚本编程的能力，借助xLua，这些Lua代码可以方便的和C#相互调用.主要讲述xlua与C#编程的相互调用</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h2 id="一、市场中-，常见的热更新插件"><a href="#一、市场中-，常见的热更新插件" class="headerlink" title="一、市场中 ，常见的热更新插件"></a>一、市场中 ，常见的热更新插件</h2><pre><code>(luainterface cs2lua tolua)-》ulua(不再维护，转到主要维护tulua)
+tolua(基于tolua开发了luaframework)
+C#light、LSharp同一个作者</code></pre><h2 id="二、lua编程支持（C-访问lua）"><a href="#二、lua编程支持（C-访问lua）" class="headerlink" title="二、lua编程支持（C#访问lua）"></a>二、lua编程支持（C#访问lua）</h2><h4 id="1-xlua是Unity3d下Lua解决方案，2016年底全平台支持使用lua-解决C-代码bug"><a href="#1-xlua是Unity3d下Lua解决方案，2016年底全平台支持使用lua-解决C-代码bug" class="headerlink" title="1.xlua是Unity3d下Lua解决方案，2016年底全平台支持使用lua 解决C#代码bug"></a>1.xlua是Unity3d下Lua解决方案，2016年底全平台支持使用lua 解决C#代码bug</h4><h6 id="缺陷："><a href="#缺陷：" class="headerlink" title="缺陷："></a>缺陷：</h6><blockquote>
+<ul>
+<li>接入成本高，某些项目已经使用C#写完了，这时需要把热更的地方用lua实现</li>
+<li>即使一开始就接入了，也存在同时使用两种语言开发暗度大的问题</li>
+<li>lua性能不如C#</li>
+</ul>
+</blockquote>
+<h6 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h6><blockquote>
+<p>xlua热补丁技术在运行时把一个C#实现（函数，操作符，属性，事件或者整个类）替换成lua实现，既可以：</p>
+<ul>
+<li>平时用C#开发</li>
+<li>运行是C#,性能秒杀lua</li>
+<li>有bug的地方下发个lua脚本fix,下次整体更新时可以把lua的实现换回正确的C#实现，更新时甚至可以做到不重启游戏</li>
+</ul>
+</blockquote>
+<h4 id="2-xLua为Unity、-Net、-Mono等C-环境增加Lua脚本编程的能力，借助xLua，这些Lua代码可以方便的和C-相互调用。"><a href="#2-xLua为Unity、-Net、-Mono等C-环境增加Lua脚本编程的能力，借助xLua，这些Lua代码可以方便的和C-相互调用。" class="headerlink" title="2.xLua为Unity、 .Net、 Mono等C#环境增加Lua脚本编程的能力，借助xLua，这些Lua代码可以方便的和C#相互调用。"></a>2.xLua为Unity、 .Net、 Mono等C#环境增加Lua脚本编程的能力，借助xLua，这些Lua代码可以方便的和C#相互调用。</h4><h4 id="3-xLua的突破"><a href="#3-xLua的突破" class="headerlink" title="3.xLua的突破"></a>3.xLua的突破</h4><blockquote>
+<ul>
+<li>xLua在功能、性能、易用性都有不少突破，这几方面分别最具代表性的是：</li>
+<li>运行时可以把C#实现（方法，操作符，属性，事件等等）替换成lua实现；</li>
+<li>出色的GC优化，自定义struct，枚举在Lua和C#间传递无C# gc alloc；</li>
+<li>编辑器下无需生成代码，开发更轻量；不需要编译代码 ，直接解析执行文件</li>
+</ul>
+</blockquote>
+<h4 id="4-在GitHub官网上下载Xlua插件，将下载的压缩包中是的Assets文件夹下是的资源导入Unity工程即可"><a href="#4-在GitHub官网上下载Xlua插件，将下载的压缩包中是的Assets文件夹下是的资源导入Unity工程即可" class="headerlink" title="4.在GitHub官网上下载Xlua插件，将下载的压缩包中是的Assets文件夹下是的资源导入Unity工程即可"></a>4.在GitHub官网上下载Xlua插件，将下载的压缩包中是的Assets文件夹下是的资源导入Unity工程即可</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/01.png" alt="图片"></p>
+<ul>
+<li>插件导入成功<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/02.png" alt="图片"></li>
+</ul>
+</blockquote>
+<h4 id="5-创建demo01场景，在场景添加空物体并挂载脚本，首先必须引入XLua的命名空间，在脚本中创建安LuaEnv类型的对象，既是开启虚拟机，营造lua的环境，有LuaEnv对象的创建，最后都要执行Dispose-函数关闭虚拟机，释放内存；Dostring-lua代码的字符串-执行lua代码"><a href="#5-创建demo01场景，在场景添加空物体并挂载脚本，首先必须引入XLua的命名空间，在脚本中创建安LuaEnv类型的对象，既是开启虚拟机，营造lua的环境，有LuaEnv对象的创建，最后都要执行Dispose-函数关闭虚拟机，释放内存；Dostring-lua代码的字符串-执行lua代码" class="headerlink" title="5.创建demo01场景，在场景添加空物体并挂载脚本，首先必须引入XLua的命名空间，在脚本中创建安LuaEnv类型的对象，既是开启虚拟机，营造lua的环境，有LuaEnv对象的创建，最后都要执行Dispose()函数关闭虚拟机，释放内存；Dostring(lua代码的字符串) 执行lua代码"></a>5.创建demo01场景，在场景添加空物体并挂载脚本，首先必须引入XLua的命名空间，在脚本中创建安LuaEnv类型的对象，既是开启虚拟机，营造lua的环境，有LuaEnv对象的创建，最后都要执行Dispose()函数关闭虚拟机，释放内存；Dostring(lua代码的字符串) 执行lua代码</h4><blockquote>
+<p>(1).注意事项：一个LuaEnv实例对应Lua虚拟机，出于开销的考虑，建议全局唯一。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/03.png" alt="图片"></p>
+<blockquote>
+<p>(2).运行游戏，执行Lua代码</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/04.png" alt="图片"></p>
+</blockquote>
+<h4 id="6-加载lua源文件，执行lua代码"><a href="#6-加载lua源文件，执行lua代码" class="headerlink" title="6.加载lua源文件，执行lua代码"></a>6.加载lua源文件，执行lua代码</h4><blockquote>
+<p>(1).使用C#加载文件的方式获取lua的代码，然后执行</p>
+</blockquote>
+<blockquote>
+<p>(2).lua内置的require引入模块的方式，获取代码并执行</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/05.png" alt="图片"></p>
+</blockquote>
+<h4 id="7-自定义Loader方法加载lua代码"><a href="#7-自定义Loader方法加载lua代码" class="headerlink" title="7.自定义Loader方法加载lua代码"></a>7.自定义Loader方法加载lua代码</h4><blockquote>
+<p>(1).System.Text.Encoding.UTF8.GetBytes(str)//将字符串转成字节数组</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/06.png" alt="图片"></p>
+</blockquote>
+<blockquote>
+<p>(2)file文件加载StreamingAssets文件夹下的资源</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/07.png" alt="图片"></p>
+</blockquote>
+<h4 id="8-在C-中访问lua代码中的数据"><a href="#8-在C-中访问lua代码中的数据" class="headerlink" title="8.在C#中访问lua代码中的数据"></a>8.在C#中访问lua代码中的数据</h4><blockquote>
+<p>(1).C#访问Lua代码中的全局变量</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/08.png" alt="图片"></p>
+</blockquote>
+<blockquote>
+<p>(2).获取Lua代码中的表</p>
+</blockquote>
+<p>①.第一种方式：映射类，类是引用类型的，映射类来接收lua表中的数据</p>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/09.png" alt="图片"></p>
+</blockquote>
+<p>②.第二种方式：接口映射，接口内部不能定义字段，故定义方法组接收和允许外界访问属性，映射lua中的表的方式类似于类，但在接口前添加[CSharpCallLua]特性，接口的映射是对全局变量的引用，不单是拷贝</p>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/10.png" alt="图片"></p>
+</blockquote>
+<p>** <font color=red >注意在接口映射函数时，lua脚本中的参数列表必须有声明当前表的参数</font> **</p>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/11.png" alt="图片"></p>
+</blockquote>
+<p>** <font color=red >注意事项的避免，使用冒号，在表的外部定义函数的，此时在接口映射，使用lua中的函数，不需要再声明当前表的变量</font> **</p>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/12.png" alt="图片"></p>
+</blockquote>
+<h4 id="9-轻量级映射方式：Dictionary-lt-gt-、list-lt-gt"><a href="#9-轻量级映射方式：Dictionary-lt-gt-、list-lt-gt" class="headerlink" title="9.轻量级映射方式：Dictionary&lt;&gt;、list&lt;&gt;"></a>9.轻量级映射方式：Dictionary&lt;&gt;、list&lt;&gt;</h4><pre><code>字典映射方法以及对应的有key值的全局变量
+集合映射值类型的全局变量</code></pre><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/13.png" alt="图片"></p>
+</blockquote>
+<h4 id="10-映射到LuaTable表中，LualTable是SLua提供的一个C-类-不需要生成代码，但是速度较慢"><a href="#10-映射到LuaTable表中，LualTable是SLua提供的一个C-类-不需要生成代码，但是速度较慢" class="headerlink" title="10.映射到LuaTable表中，LualTable是SLua提供的一个C#类,不需要生成代码，但是速度较慢"></a>10.映射到LuaTable表中，LualTable是SLua提供的一个C#类,不需要生成代码，但是速度较慢</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/14.png" alt="图片"></p>
+</blockquote>
+<h4 id="11-在C-中调用Lua中的全局函数"><a href="#11-在C-中调用Lua中的全局函数" class="headerlink" title="11.在C#中调用Lua中的全局函数"></a>11.在C#中调用Lua中的全局函数</h4><blockquote>
+<p>(1).映射无参函数时，可以直接使用Action当做引用类型映射函数执行</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/15.png" alt="图片"></p>
+</blockquote>
+<blockquote>
+<p>(2).若传递参数，需要使用delegate声明委托，在映射时，使用声明的委托为应用类型映射，使用委托定义的对象传递参数，若有返回值可以接受并返回</p>
+</blockquote>
+<blockquote>
+<p>(3).lua代码中，函数可以返回多个值，在C#中可以通过out参数或者ref解决函数返回多个值问题</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/16.png" alt="图片"></p>
+</blockquote>
+<h4 id="12-使用LuaFunction映射"><a href="#12-使用LuaFunction映射" class="headerlink" title="12.使用LuaFunction映射"></a>12.使用LuaFunction映射</h4><blockquote>
+<p>(1).映射无参数全局函数，获得LuaFunction对象调用Call函数即可执行</p>
+</blockquote>
+<blockquote>
+<p>(2).有参数直接在Call函数中传递参数即可，有返回值的，定义object数组来接收单个或多个返回值</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/17.png" alt="图片"></p>
+</blockquote>
+<h2 id="三、lua访问C-sharp"><a href="#三、lua访问C-sharp" class="headerlink" title="三、lua访问C sharp"></a>三、lua访问C sharp</h2><h4 id="1-在Lua中调用C-函数-创建空的游戏物体"><a href="#1-在Lua中调用C-函数-创建空的游戏物体" class="headerlink" title="1.在Lua中调用C#函数,创建空的游戏物体"></a>1.在Lua中调用C#函数,创建空的游戏物体</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/18.png" alt="图片"></p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/19.png" alt="图片"></p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/20.png" alt="图片"></p>
+</blockquote>
+<blockquote>
+<p>(1).<font color=red >注意:</font>在Lua中需要多次使用C#中的某类对象时，可以定义局部变量引用该类，减少代码的冗余，提高性能</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/21.png" alt="图片"></p>
+</blockquote>
+<blockquote>
+<p>(2).在lua中访问成员方法时，必须使用冒号<br>Object:成员方法</p>
+</blockquote>
+<blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-2/22.png" alt="图片"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Lua</category>
+      </categories>
+      <tags>
+        <tag>XLua入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo+GitHub搭建个人博客</title>
+    <url>/2019/12/17/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>主要介绍基于Hexo+GitHub搭建博客的过程</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h2 id="一、前提准备"><a href="#一、前提准备" class="headerlink" title="一、前提准备"></a>一、前提准备</h2><h4 id="1-拥有GitHub账号"><a href="#1-拥有GitHub账号" class="headerlink" title="1.拥有GitHub账号"></a>1.拥有GitHub账号</h4><blockquote>
+<p>GitHub 是一个面向开源及私有软件项目的托管平台。<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitHub%E6%B3%A8%E5%86%8C.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-下载并安装Git"><a href="#2-下载并安装Git" class="headerlink" title="2.下载并安装Git"></a>2.下载并安装Git</h4><blockquote>
+<p>Git是目前世界上最先进的分布式版本控制系统。</p>
+</blockquote>
+<ul>
+<li>官方网址：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a> </li>
+<li>安装教程请参考：<a href="https://blog.csdn.net/weixin_44950987/article/details/102619708" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44950987/article/details/102619708</a>.<br> <img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Git%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD.png" alt="图片"> </li>
+</ul>
+<h4 id="3-下载并在安装Node-js"><a href="#3-下载并在安装Node-js" class="headerlink" title="3.下载并在安装Node.js"></a>3.下载并在安装Node.js</h4><blockquote>
+<p>Node.js是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</p>
+</blockquote>
+<ul>
+<li>官方网址：<a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a></li>
+<li>安装教程请参考：<a href="https://blog.csdn.net/qq_42543312/article/details/82191357" target="_blank" rel="noopener">https://blog.csdn.net/qq_42543312/article/details/82191357</a><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/NodeJS.png" alt="图片"></li>
+</ul>
+<hr>
+<h2 id="二、配置Git"><a href="#二、配置Git" class="headerlink" title="二、配置Git"></a>二、配置Git</h2><h4 id="1-下载并安装后，在桌面空白处右键选择Git-Bash-Here进入命令Git窗口"><a href="#1-下载并安装后，在桌面空白处右键选择Git-Bash-Here进入命令Git窗口" class="headerlink" title="1.下载并安装后，在桌面空白处右键选择Git Bash Here进入命令Git窗口"></a>1.下载并安装后，在桌面空白处右键选择<a>Git Bash Here</a>进入命令Git窗口</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitBashHere.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-配置用户名与邮箱"><a href="#2-配置用户名与邮箱" class="headerlink" title="2.配置用户名与邮箱"></a>2.配置用户名与邮箱</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitUserName.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitEmail.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-查看配置的用户名和邮箱"><a href="#3-查看配置的用户名和邮箱" class="headerlink" title="3.查看配置的用户名和邮箱"></a>3.查看配置的用户名和邮箱</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitUserEmail.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h2 id="三、配置SSH"><a href="#三、配置SSH" class="headerlink" title="三、配置SSH"></a>三、配置SSH</h2><h4 id="1-登录到GitHub-左上角加号选择New-Repository"><a href="#1-登录到GitHub-左上角加号选择New-Repository" class="headerlink" title="1.登录到GitHub,左上角加号选择New Repository"></a>1.登录到GitHub,左上角加号选择New Repository</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/OpenRepo.png" alt="图片"><br>Repository name仓库名是固定格式的<a>用户名.github.io</a><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/CreateRepo.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-回到Git-Bash-Here窗口，键入命令行：ssh-keygen-t-rsa-C-“GitHub邮箱”-在本地生成ssh-key-默认生成id-rsa文件，存放在C-用户-用户名-ssh-id-rsa-pub-若未找到，选择查看隐藏文件"><a href="#2-回到Git-Bash-Here窗口，键入命令行：ssh-keygen-t-rsa-C-“GitHub邮箱”-在本地生成ssh-key-默认生成id-rsa文件，存放在C-用户-用户名-ssh-id-rsa-pub-若未找到，选择查看隐藏文件" class="headerlink" title="2.回到Git Bash Here窗口，键入命令行：ssh-keygen -t -rsa -C “GitHub邮箱”,在本地生成ssh key,默认生成id_rsa文件，存放在C/用户/用户名/.ssh/id_rsa.pub(若未找到，选择查看隐藏文件)"></a>2.回到Git Bash Here窗口，键入命令行：ssh-keygen -t -rsa -C “GitHub邮箱”,在本地生成ssh key,默认生成id_rsa文件，存放在C/用户/用户名/.ssh/id_rsa.pub(若未找到，选择查看隐藏文件)</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/CreateSSHKey.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-回到GitHub页面，点击头像，选择Settings"><a href="#3-回到GitHub页面，点击头像，选择Settings" class="headerlink" title="3.回到GitHub页面，点击头像，选择Settings"></a>3.回到GitHub页面，点击头像，选择Settings</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/openSettings.png" alt="图片"></p>
+</blockquote>
+<h4 id="4-Personal-settings设置栏下，选择SSH-and-GPG-keys，选择New-SSH-key"><a href="#4-Personal-settings设置栏下，选择SSH-and-GPG-keys，选择New-SSH-key" class="headerlink" title="4.Personal settings设置栏下，选择SSH and GPG keys，选择New SSH key"></a>4.Personal settings设置栏下，选择SSH and GPG keys，选择New SSH key</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/NewSSH.png" alt="图片"></p>
+</blockquote>
+<h4 id="5-找到在本地生成的ssh-key的文件，以记事本格式打开，复制ssh-key值"><a href="#5-找到在本地生成的ssh-key的文件，以记事本格式打开，复制ssh-key值" class="headerlink" title="5.找到在本地生成的ssh key的文件，以记事本格式打开，复制ssh key值"></a>5.找到在本地生成的ssh key的文件，以记事本格式打开，复制ssh key值</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/openLocalSSHKey.png" alt="图片"></p>
+</blockquote>
+<h4 id="6-将本地的ssh-key添加到新建的SSH的key栏下，Title自定-结果如图显示"><a href="#6-将本地的ssh-key添加到新建的SSH的key栏下，Title自定-结果如图显示" class="headerlink" title="6.将本地的ssh key添加到新建的SSH的key栏下，Title自定,结果如图显示"></a>6.将本地的ssh key添加到新建的SSH的key栏下，Title自定,结果如图显示</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/AddSSHKey.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/FinshSSHKey.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h2 id="四、安装和配置Hexo"><a href="#四、安装和配置Hexo" class="headerlink" title="四、安装和配置Hexo"></a>四、安装和配置Hexo</h2><h4 id="1-Hexo"><a href="#1-Hexo" class="headerlink" title="1.Hexo"></a>1.Hexo</h4><blockquote>
+<p>快速、简洁且高效的博客框架</p>
+</blockquote>
+<h4 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h4><blockquote>
+<p>(1).cmd窗口下，输入安装命令: npm install -g hexo，如下图<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/CmdInstallHexo.png" alt="图片"><br>(2).Git Bash Here窗口下，输入命令：npm install -g hexo-cli,如下图安装成功，(1)和(2)安装其一即可<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitInstallHexo.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h2 id="五、本地搭建并部署到GitHub"><a href="#五、本地搭建并部署到GitHub" class="headerlink" title="五、本地搭建并部署到GitHub"></a>五、本地搭建并部署到GitHub</h2><h4 id="1-退出在桌面打开的Git-Bash-Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git-Bash-Here"><a href="#1-退出在桌面打开的Git-Bash-Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git-Bash-Here" class="headerlink" title="1.退出在桌面打开的Git Bash Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git Bash Here"></a>1.退出在桌面打开的Git Bash Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git Bash Here</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/empty.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-在Git窗口输入命令：hexo-init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm-install，自动安装依赖列表中的所有模块"><a href="#2-在Git窗口输入命令：hexo-init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm-install，自动安装依赖列表中的所有模块" class="headerlink" title="2.在Git窗口输入命令：hexo init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm install，自动安装依赖列表中的所有模块"></a>2.在Git窗口输入命令：hexo init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm install，自动安装依赖列表中的所有模块</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/InstallHexoFile.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/InitHexoFile.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-键入命令：npm-install-hexo-deployer-git-–save，安装hexo对GitHub的部署工具，以便部署博客到Github"><a href="#3-键入命令：npm-install-hexo-deployer-git-–save，安装hexo对GitHub的部署工具，以便部署博客到Github" class="headerlink" title="3.键入命令：npm install hexo-deployer-git –save，安装hexo对GitHub的部署工具，以便部署博客到Github"></a>3.键入命令：npm install hexo-deployer-git –save，安装hexo对GitHub的部署工具，以便部署博客到Github</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/HexoDeployer.png" alt="图片"></p>
+</blockquote>
+<h4 id="5-键入命令：hexo-server，右键copy本地的地址，在浏览器打开查看是否部署成功"><a href="#5-键入命令：hexo-server，右键copy本地的地址，在浏览器打开查看是否部署成功" class="headerlink" title="5.键入命令：hexo server，右键copy本地的地址，在浏览器打开查看是否部署成功"></a>5.键入命令：hexo server，右键copy本地的地址，在浏览器打开查看是否部署成功</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/TestLocalPages.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Hexo.png" alt="图片"></p>
+</blockquote>
+<h4 id="6-回到GitHub-打开刚建的仓库，复制SSH的值"><a href="#6-回到GitHub-打开刚建的仓库，复制SSH的值" class="headerlink" title="6.回到GitHub,打开刚建的仓库，复制SSH的值"></a>6.回到GitHub,打开刚建的仓库，复制SSH的值</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/yourRepo.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Repo.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/copySSH.png" alt="图片"></p>
+</blockquote>
+<h4 id="7-打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件-config-yml-设置deploy参数"><a href="#7-打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件-config-yml-设置deploy参数" class="headerlink" title="7.打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件_config.yml,设置deploy参数"></a>7.打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件_config.yml,设置deploy参数</h4><blockquote>
+<p>type参数，空格git<br>添加repository参数，空格+GitHub上SSH的地址；branch参数是master（注意空格)<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/changeYml.png" alt="图片"><br>整体操作如图<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/FinshSSH.png" alt="图片"></p>
+</blockquote>
+<h4 id="8-键入命令-hexo-g-d-先在本地文件重新生成静态文件并部署到GitHub"><a href="#8-键入命令-hexo-g-d-先在本地文件重新生成静态文件并部署到GitHub" class="headerlink" title="8.键入命令:hexo g -d,先在本地文件重新生成静态文件并部署到GitHub"></a>8.键入命令:hexo g -d,先在本地文件重新生成静态文件并部署到GitHub</h4><blockquote>
+<p>显示INFO Deploy done：Git则部署成功<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Finsh.png" alt="图片"><br>可以直接使用 仓库名访问到建立的博客<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/MyBlog.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><blockquote>
+<ul>
+<li>npm install -g hexo #安装Hexo</li>
+<li>npm update hexo -g #升级</li>
+<li>hexo init #初始化本地博客</li>
+<li>hexo install #安装列表依赖的模块</li>
+<li>npm install hexo-deployer-git –save #安装部署工具</li>
+<li>hexo generate/g #重新生成静态文件</li>
+<li>hexo deploy/d  #部署到GiuHub</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>搭建博客</tag>
+      </tags>
+  </entry>
+</search>

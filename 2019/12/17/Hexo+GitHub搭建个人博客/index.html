@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/xxw/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/xxw/pace/pace-theme-pace-theme-center-atom.min.css">
+  <script src="/xxw/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="前言 主要介绍基于Hexo+GitHub搭建博客的过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+GitHub搭建个人博客">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;17&#x2F;Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:site_name" content="2080">
+<meta property="og:description" content="前言 主要介绍基于Hexo+GitHub搭建博客的过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;GitHub%E6%B3%A8%E5%86%8C.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;Git%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;NodeJS.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;GitBashHere.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;GitUserName.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;GitEmail.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;GitUserEmail.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;OpenRepo.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;CreateRepo.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;CreateSSHKey.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;openSettings.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;NewSSH.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;openLocalSSHKey.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;AddSSHKey.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;FinshSSHKey.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;CmdInstallHexo.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;GitInstallHexo.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;empty.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;InstallHexoFile.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;InitHexoFile.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;HexoDeployer.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;TestLocalPages.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;Hexo.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;yourRepo.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;Repo.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;copySSH.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;changeYml.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;FinshSSH.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;Finsh.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;MyBlog.png">
+<meta property="article:published_time" content="2019-12-17T12:41:24.270Z">
+<meta property="article:modified_time" content="2019-12-23T12:44:48.443Z">
+<meta property="article:author" content="2080">
+<meta property="article:tag" content="搭建博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-3&#x2F;GitHub%E6%B3%A8%E5%86%8C.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/12/17/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Hexo+GitHub搭建个人博客 | 2080</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2080</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">执手此生，伴君行</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/17/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/xy2080/1213/1-2/1213.png">
+      <meta itemprop="name" content="2080">
+      <meta itemprop="description" content="翟喜悦叫爸爸">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2080">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo+GitHub搭建个人博客
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-17 20:41:24" itemprop="dateCreated datePublished" datetime="2019-12-17T20:41:24+08:00">2019-12-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-23 20:44:48" itemprop="dateModified" datetime="2019-12-23T20:44:48+08:00">2019-12-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/GitHub/" itemprop="url" rel="index">
+                    <span itemprop="name">GitHub</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/12/17/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/17/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>主要介绍基于Hexo+GitHub搭建博客的过程</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h2 id="一、前提准备"><a href="#一、前提准备" class="headerlink" title="一、前提准备"></a>一、前提准备</h2><h4 id="1-拥有GitHub账号"><a href="#1-拥有GitHub账号" class="headerlink" title="1.拥有GitHub账号"></a>1.拥有GitHub账号</h4><blockquote>
+<p>GitHub 是一个面向开源及私有软件项目的托管平台。<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitHub%E6%B3%A8%E5%86%8C.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-下载并安装Git"><a href="#2-下载并安装Git" class="headerlink" title="2.下载并安装Git"></a>2.下载并安装Git</h4><blockquote>
+<p>Git是目前世界上最先进的分布式版本控制系统。</p>
+</blockquote>
+<ul>
+<li>官方网址：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a> </li>
+<li>安装教程请参考：<a href="https://blog.csdn.net/weixin_44950987/article/details/102619708" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44950987/article/details/102619708</a>.<br> <img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Git%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD.png" alt="图片"> </li>
+</ul>
+<h4 id="3-下载并在安装Node-js"><a href="#3-下载并在安装Node-js" class="headerlink" title="3.下载并在安装Node.js"></a>3.下载并在安装Node.js</h4><blockquote>
+<p>Node.js是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</p>
+</blockquote>
+<ul>
+<li>官方网址：<a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a></li>
+<li>安装教程请参考：<a href="https://blog.csdn.net/qq_42543312/article/details/82191357" target="_blank" rel="noopener">https://blog.csdn.net/qq_42543312/article/details/82191357</a><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/NodeJS.png" alt="图片"></li>
+</ul>
+<hr>
+<h2 id="二、配置Git"><a href="#二、配置Git" class="headerlink" title="二、配置Git"></a>二、配置Git</h2><h4 id="1-下载并安装后，在桌面空白处右键选择Git-Bash-Here进入命令Git窗口"><a href="#1-下载并安装后，在桌面空白处右键选择Git-Bash-Here进入命令Git窗口" class="headerlink" title="1.下载并安装后，在桌面空白处右键选择Git Bash Here进入命令Git窗口"></a>1.下载并安装后，在桌面空白处右键选择<a>Git Bash Here</a>进入命令Git窗口</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitBashHere.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-配置用户名与邮箱"><a href="#2-配置用户名与邮箱" class="headerlink" title="2.配置用户名与邮箱"></a>2.配置用户名与邮箱</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitUserName.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitEmail.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-查看配置的用户名和邮箱"><a href="#3-查看配置的用户名和邮箱" class="headerlink" title="3.查看配置的用户名和邮箱"></a>3.查看配置的用户名和邮箱</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitUserEmail.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h2 id="三、配置SSH"><a href="#三、配置SSH" class="headerlink" title="三、配置SSH"></a>三、配置SSH</h2><h4 id="1-登录到GitHub-左上角加号选择New-Repository"><a href="#1-登录到GitHub-左上角加号选择New-Repository" class="headerlink" title="1.登录到GitHub,左上角加号选择New Repository"></a>1.登录到GitHub,左上角加号选择New Repository</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/OpenRepo.png" alt="图片"><br>Repository name仓库名是固定格式的<a>用户名.github.io</a><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/CreateRepo.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-回到Git-Bash-Here窗口，键入命令行：ssh-keygen-t-rsa-C-“GitHub邮箱”-在本地生成ssh-key-默认生成id-rsa文件，存放在C-用户-用户名-ssh-id-rsa-pub-若未找到，选择查看隐藏文件"><a href="#2-回到Git-Bash-Here窗口，键入命令行：ssh-keygen-t-rsa-C-“GitHub邮箱”-在本地生成ssh-key-默认生成id-rsa文件，存放在C-用户-用户名-ssh-id-rsa-pub-若未找到，选择查看隐藏文件" class="headerlink" title="2.回到Git Bash Here窗口，键入命令行：ssh-keygen -t -rsa -C “GitHub邮箱”,在本地生成ssh key,默认生成id_rsa文件，存放在C/用户/用户名/.ssh/id_rsa.pub(若未找到，选择查看隐藏文件)"></a>2.回到Git Bash Here窗口，键入命令行：ssh-keygen -t -rsa -C “GitHub邮箱”,在本地生成ssh key,默认生成id_rsa文件，存放在C/用户/用户名/.ssh/id_rsa.pub(若未找到，选择查看隐藏文件)</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/CreateSSHKey.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-回到GitHub页面，点击头像，选择Settings"><a href="#3-回到GitHub页面，点击头像，选择Settings" class="headerlink" title="3.回到GitHub页面，点击头像，选择Settings"></a>3.回到GitHub页面，点击头像，选择Settings</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/openSettings.png" alt="图片"></p>
+</blockquote>
+<h4 id="4-Personal-settings设置栏下，选择SSH-and-GPG-keys，选择New-SSH-key"><a href="#4-Personal-settings设置栏下，选择SSH-and-GPG-keys，选择New-SSH-key" class="headerlink" title="4.Personal settings设置栏下，选择SSH and GPG keys，选择New SSH key"></a>4.Personal settings设置栏下，选择SSH and GPG keys，选择New SSH key</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/NewSSH.png" alt="图片"></p>
+</blockquote>
+<h4 id="5-找到在本地生成的ssh-key的文件，以记事本格式打开，复制ssh-key值"><a href="#5-找到在本地生成的ssh-key的文件，以记事本格式打开，复制ssh-key值" class="headerlink" title="5.找到在本地生成的ssh key的文件，以记事本格式打开，复制ssh key值"></a>5.找到在本地生成的ssh key的文件，以记事本格式打开，复制ssh key值</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/openLocalSSHKey.png" alt="图片"></p>
+</blockquote>
+<h4 id="6-将本地的ssh-key添加到新建的SSH的key栏下，Title自定-结果如图显示"><a href="#6-将本地的ssh-key添加到新建的SSH的key栏下，Title自定-结果如图显示" class="headerlink" title="6.将本地的ssh key添加到新建的SSH的key栏下，Title自定,结果如图显示"></a>6.将本地的ssh key添加到新建的SSH的key栏下，Title自定,结果如图显示</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/AddSSHKey.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/FinshSSHKey.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h2 id="四、安装和配置Hexo"><a href="#四、安装和配置Hexo" class="headerlink" title="四、安装和配置Hexo"></a>四、安装和配置Hexo</h2><h4 id="1-Hexo"><a href="#1-Hexo" class="headerlink" title="1.Hexo"></a>1.Hexo</h4><blockquote>
+<p>快速、简洁且高效的博客框架</p>
+</blockquote>
+<h4 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h4><blockquote>
+<p>(1).cmd窗口下，输入安装命令: npm install -g hexo，如下图<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/CmdInstallHexo.png" alt="图片"><br>(2).Git Bash Here窗口下，输入命令：npm install -g hexo-cli,如下图安装成功，(1)和(2)安装其一即可<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/GitInstallHexo.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h2 id="五、本地搭建并部署到GitHub"><a href="#五、本地搭建并部署到GitHub" class="headerlink" title="五、本地搭建并部署到GitHub"></a>五、本地搭建并部署到GitHub</h2><h4 id="1-退出在桌面打开的Git-Bash-Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git-Bash-Here"><a href="#1-退出在桌面打开的Git-Bash-Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git-Bash-Here" class="headerlink" title="1.退出在桌面打开的Git Bash Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git Bash Here"></a>1.退出在桌面打开的Git Bash Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git Bash Here</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/empty.png" alt="图片"></p>
+</blockquote>
+<h4 id="2-在Git窗口输入命令：hexo-init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm-install，自动安装依赖列表中的所有模块"><a href="#2-在Git窗口输入命令：hexo-init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm-install，自动安装依赖列表中的所有模块" class="headerlink" title="2.在Git窗口输入命令：hexo init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm install，自动安装依赖列表中的所有模块"></a>2.在Git窗口输入命令：hexo init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm install，自动安装依赖列表中的所有模块</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/InstallHexoFile.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/InitHexoFile.png" alt="图片"></p>
+</blockquote>
+<h4 id="3-键入命令：npm-install-hexo-deployer-git-–save，安装hexo对GitHub的部署工具，以便部署博客到Github"><a href="#3-键入命令：npm-install-hexo-deployer-git-–save，安装hexo对GitHub的部署工具，以便部署博客到Github" class="headerlink" title="3.键入命令：npm install hexo-deployer-git –save，安装hexo对GitHub的部署工具，以便部署博客到Github"></a>3.键入命令：npm install hexo-deployer-git –save，安装hexo对GitHub的部署工具，以便部署博客到Github</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/HexoDeployer.png" alt="图片"></p>
+</blockquote>
+<h4 id="5-键入命令：hexo-server，右键copy本地的地址，在浏览器打开查看是否部署成功"><a href="#5-键入命令：hexo-server，右键copy本地的地址，在浏览器打开查看是否部署成功" class="headerlink" title="5.键入命令：hexo server，右键copy本地的地址，在浏览器打开查看是否部署成功"></a>5.键入命令：hexo server，右键copy本地的地址，在浏览器打开查看是否部署成功</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/TestLocalPages.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Hexo.png" alt="图片"></p>
+</blockquote>
+<h4 id="6-回到GitHub-打开刚建的仓库，复制SSH的值"><a href="#6-回到GitHub-打开刚建的仓库，复制SSH的值" class="headerlink" title="6.回到GitHub,打开刚建的仓库，复制SSH的值"></a>6.回到GitHub,打开刚建的仓库，复制SSH的值</h4><blockquote>
+<p><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/yourRepo.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Repo.png" alt="图片"><br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/copySSH.png" alt="图片"></p>
+</blockquote>
+<h4 id="7-打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件-config-yml-设置deploy参数"><a href="#7-打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件-config-yml-设置deploy参数" class="headerlink" title="7.打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件_config.yml,设置deploy参数"></a>7.打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件_config.yml,设置deploy参数</h4><blockquote>
+<p>type参数，空格git<br>添加repository参数，空格+GitHub上SSH的地址；branch参数是master（注意空格)<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/changeYml.png" alt="图片"><br>整体操作如图<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/FinshSSH.png" alt="图片"></p>
+</blockquote>
+<h4 id="8-键入命令-hexo-g-d-先在本地文件重新生成静态文件并部署到GitHub"><a href="#8-键入命令-hexo-g-d-先在本地文件重新生成静态文件并部署到GitHub" class="headerlink" title="8.键入命令:hexo g -d,先在本地文件重新生成静态文件并部署到GitHub"></a>8.键入命令:hexo g -d,先在本地文件重新生成静态文件并部署到GitHub</h4><blockquote>
+<p>显示INFO Deploy done：Git则部署成功<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/Finsh.png" alt="图片"><br>可以直接使用 仓库名访问到建立的博客<br><img src="https://raw.githubusercontent.com/xy2080/1213/1-3/MyBlog.png" alt="图片"></p>
+</blockquote>
+<hr>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><blockquote>
+<ul>
+<li>npm install -g hexo #安装Hexo</li>
+<li>npm update hexo -g #升级</li>
+<li>hexo init #初始化本地博客</li>
+<li>hexo install #安装列表依赖的模块</li>
+<li>npm install hexo-deployer-git –save #安装部署工具</li>
+<li>hexo generate/g #重新生成静态文件</li>
+<li>hexo deploy/d  #部署到GiuHub</li>
+</ul>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="2080 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="2080 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="tag"># 搭建博客</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/23/XLua%E5%85%A5%E9%97%A8/" rel="next" title="XLua入门">
+      XLua入门 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、前提准备"><span class="nav-text">一、前提准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-拥有GitHub账号"><span class="nav-text">1.拥有GitHub账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-下载并安装Git"><span class="nav-text">2.下载并安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-下载并在安装Node-js"><span class="nav-text">3.下载并在安装Node.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、配置Git"><span class="nav-text">二、配置Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-下载并安装后，在桌面空白处右键选择Git-Bash-Here进入命令Git窗口"><span class="nav-text">1.下载并安装后，在桌面空白处右键选择Git Bash Here进入命令Git窗口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-配置用户名与邮箱"><span class="nav-text">2.配置用户名与邮箱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-查看配置的用户名和邮箱"><span class="nav-text">3.查看配置的用户名和邮箱</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、配置SSH"><span class="nav-text">三、配置SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-登录到GitHub-左上角加号选择New-Repository"><span class="nav-text">1.登录到GitHub,左上角加号选择New Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-回到Git-Bash-Here窗口，键入命令行：ssh-keygen-t-rsa-C-“GitHub邮箱”-在本地生成ssh-key-默认生成id-rsa文件，存放在C-用户-用户名-ssh-id-rsa-pub-若未找到，选择查看隐藏文件"><span class="nav-text">2.回到Git Bash Here窗口，键入命令行：ssh-keygen -t -rsa -C “GitHub邮箱”,在本地生成ssh key,默认生成id_rsa文件，存放在C&#x2F;用户&#x2F;用户名&#x2F;.ssh&#x2F;id_rsa.pub(若未找到，选择查看隐藏文件)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-回到GitHub页面，点击头像，选择Settings"><span class="nav-text">3.回到GitHub页面，点击头像，选择Settings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Personal-settings设置栏下，选择SSH-and-GPG-keys，选择New-SSH-key"><span class="nav-text">4.Personal settings设置栏下，选择SSH and GPG keys，选择New SSH key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-找到在本地生成的ssh-key的文件，以记事本格式打开，复制ssh-key值"><span class="nav-text">5.找到在本地生成的ssh key的文件，以记事本格式打开，复制ssh key值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-将本地的ssh-key添加到新建的SSH的key栏下，Title自定-结果如图显示"><span class="nav-text">6.将本地的ssh key添加到新建的SSH的key栏下，Title自定,结果如图显示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、安装和配置Hexo"><span class="nav-text">四、安装和配置Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Hexo"><span class="nav-text">1.Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装hexo"><span class="nav-text">2.安装hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、本地搭建并部署到GitHub"><span class="nav-text">五、本地搭建并部署到GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-退出在桌面打开的Git-Bash-Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git-Bash-Here"><span class="nav-text">1.退出在桌面打开的Git Bash Here，选择一个盘，新建一个空白文件夹存放博客所需的配置文件，在文件夹下右键打开Git Bash Here</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-在Git窗口输入命令：hexo-init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm-install，自动安装依赖列表中的所有模块"><span class="nav-text">2.在Git窗口输入命令：hexo init命令，在文件夹中将其初始化成本地网站的Hexo的根目录，输入命令：npm install，自动安装依赖列表中的所有模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-键入命令：npm-install-hexo-deployer-git-–save，安装hexo对GitHub的部署工具，以便部署博客到Github"><span class="nav-text">3.键入命令：npm install hexo-deployer-git –save，安装hexo对GitHub的部署工具，以便部署博客到Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-键入命令：hexo-server，右键copy本地的地址，在浏览器打开查看是否部署成功"><span class="nav-text">5.键入命令：hexo server，右键copy本地的地址，在浏览器打开查看是否部署成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-回到GitHub-打开刚建的仓库，复制SSH的值"><span class="nav-text">6.回到GitHub,打开刚建的仓库，复制SSH的值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件-config-yml-设置deploy参数"><span class="nav-text">7.打开刚才配置网站本地的文件夹，找到并使用编辑器打开配置文件_config.yml,设置deploy参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-键入命令-hexo-g-d-先在本地文件重新生成静态文件并部署到GitHub"><span class="nav-text">8.键入命令:hexo g -d,先在本地文件重新生成静态文件并部署到GitHub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-text">常用命令</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="2080"
+      src="https://raw.githubusercontent.com/xy2080/1213/1-2/1213.png">
+  <p class="site-author-name" itemprop="name">2080</p>
+  <div class="site-description" itemprop="description">翟喜悦叫爸爸</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xy2080" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xy2080" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2226822070@qq.com" title="E-Mail → mailto:2226822070@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2226822070&site=qq&menu=yes" title="Q Q → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2226822070&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>Q Q</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/%E6%B2%A1%E6%B2%A1%E6%B2%A1%E6%B2%A13711" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;没没没没3711" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-linkedin-square"></i>
+      推荐阅读
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/Unity" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;Unity">Unity</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/Lua" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;Lua">Lua</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/VR" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;VR">VR</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+       <div id="music163player">
+       <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33911781&auto=1&height=66">
+        </iframe>
+       </div>
+    </div>
+  
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2080</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/xxw/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/xxw/anime.min.js"></script>
+  <script src="/xxw/velocity/velocity.min.js"></script>
+  <script src="/xxw/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'i7GPtg0c6M8cs1fh69auRl6y-gzGzoHsz',
+    appKey: 'CI8TERh8I48DbazNrCfMgH4J',
+    placeholder: "留下点东西吧...",
+    avatar: 'mp',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
+<script type="text/javascript" src="/js/clicklove.js"></script>

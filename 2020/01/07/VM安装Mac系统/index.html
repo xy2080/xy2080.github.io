@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/xxw/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/xxw/pace/pace-theme-pace-theme-center-atom.min.css">
+  <script src="/xxw/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="前言 VM15.5.0安装以及Mac系统的安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VM安装Mac系统">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;07&#x2F;VM%E5%AE%89%E8%A3%85Mac%E7%B3%BB%E7%BB%9F&#x2F;index.html">
+<meta property="og:site_name" content="2080">
+<meta property="og:description" content="前言 VM15.5.0安装以及Mac系统的安装">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;01.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;02.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;03.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;04.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;05.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;06.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;07.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;08.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;09.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;10.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;11.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;12.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;13.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;14.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;15.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;16.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;17.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;18.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;19.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;20.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;21.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;22.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;23.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;24.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;25.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;26.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;27.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;28.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;29.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;30.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;31.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;32.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;33.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;34.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;35.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;36.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;37.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;38.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;39.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;40.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;41.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;42.png">
+<meta property="article:published_time" content="2020-01-07T09:07:25.569Z">
+<meta property="article:modified_time" content="2020-01-07T09:30:39.684Z">
+<meta property="article:author" content="2080">
+<meta property="article:tag" content="VM">
+<meta property="article:tag" content="Mac">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xy2080&#x2F;1213&#x2F;1-5&#x2F;01.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/01/07/VM%E5%AE%89%E8%A3%85Mac%E7%B3%BB%E7%BB%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>VM安装Mac系统 | 2080</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2080</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">执手此生，伴君行</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/07/VM%E5%AE%89%E8%A3%85Mac%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/xy2080/1213/1-2/1213.png">
+      <meta itemprop="name" content="2080">
+      <meta itemprop="description" content="翟喜悦叫爸爸">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2080">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VM安装Mac系统
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-07 17:07:25 / 修改时间：17:30:39" itemprop="dateCreated datePublished" datetime="2020-01-07T17:07:25+08:00">2020-01-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">虚拟机</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>VM15.5.0安装以及Mac系统的安装</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="一、安装虚拟机"><a href="#一、安装虚拟机" class="headerlink" title="一、安装虚拟机"></a>一、安装虚拟机</h2><h5 id="1-下载VM15-5-0安装包"><a href="#1-下载VM15-5-0安装包" class="headerlink" title="1.下载VM15.5.0安装包"></a>1.下载VM15.5.0安装包</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/01.png" alt="图片"></p>
+<h5 id="2-鼠标右击【VMware-15-5-0】压缩包选择【解压到VMware-15-5-0】。"><a href="#2-鼠标右击【VMware-15-5-0】压缩包选择【解压到VMware-15-5-0】。" class="headerlink" title="2.鼠标右击【VMware 15.5.0】压缩包选择【解压到VMware 15.5.0】。"></a>2.鼠标右击【VMware 15.5.0】压缩包选择【解压到VMware 15.5.0】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/02.png" alt="图片"></p>
+<h5 id="3-双击打开解压后的【VMware-15-5-0】文件夹。"><a href="#3-双击打开解压后的【VMware-15-5-0】文件夹。" class="headerlink" title="3.双击打开解压后的【VMware 15.5.0】文件夹。"></a>3.双击打开解压后的【VMware 15.5.0】文件夹。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/03.png" alt="图片"></p>
+<h5 id="4-鼠标右击【VMware-15-5-0】选择【以管理员身份运行】。"><a href="#4-鼠标右击【VMware-15-5-0】选择【以管理员身份运行】。" class="headerlink" title="4.鼠标右击【VMware 15.5.0】选择【以管理员身份运行】。"></a>4.鼠标右击【VMware 15.5.0】选择【以管理员身份运行】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/04.png" alt="图片"></p>
+<h5 id="5-正在准备中。"><a href="#5-正在准备中。" class="headerlink" title="5.正在准备中。"></a>5.正在准备中。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/05.png" alt="图片"></p>
+<h5 id="6-点击【下一步】。"><a href="#6-点击【下一步】。" class="headerlink" title="6.点击【下一步】。"></a>6.点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/06.png" alt="图片"></p>
+<h5 id="7-勾选【我接受许可协议中的条款】，然后点击【下一步】。"><a href="#7-勾选【我接受许可协议中的条款】，然后点击【下一步】。" class="headerlink" title="7.勾选【我接受许可协议中的条款】，然后点击【下一步】。"></a>7.勾选【我接受许可协议中的条款】，然后点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/07.png" alt="图片"></p>
+<h5 id="8-点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。"><a href="#8-点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。" class="headerlink" title="8.点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。"></a>8.点击【更改】更改软件的安装路径，建议安装在除C盘之外的其它磁盘，可以在D盘或者其它盘新建一个【VMware15】文件夹，然后点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/08.png" alt="图片"></p>
+<h5 id="9-取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。"><a href="#9-取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。" class="headerlink" title="9.取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。"></a>9.取消勾选【启动时检查产品更新…】与【加入VMware客户体验提升计划】，然后点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/09.png" alt="图片"></p>
+<h5 id="10-点击【下一步】。"><a href="#10-点击【下一步】。" class="headerlink" title="10.点击【下一步】。"></a>10.点击【下一步】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/10.png" alt="图片"></p>
+<h5 id="11-点击【安装】。"><a href="#11-点击【安装】。" class="headerlink" title="11.点击【安装】。"></a>11.点击【安装】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/11.png" alt="图片"></p>
+<h5 id="12-安装中。"><a href="#12-安装中。" class="headerlink" title="12.安装中。"></a>12.安装中。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/12.png" alt="图片"></p>
+<h5 id="13-点击【许可证】。"><a href="#13-点击【许可证】。" class="headerlink" title="13.点击【许可证】。"></a>13.点击【许可证】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/13.png" alt="图片"></p>
+<h5 id="14-许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。"><a href="#14-许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。" class="headerlink" title="14.许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。"></a>14.许可证密钥输入【UY758-0RXEQ-M81WP-8ZM7Z-Y3HDA】，然后点击【输入】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/14.png" alt="图片"></p>
+<h5 id="15-点击【完成】。"><a href="#15-点击【完成】。" class="headerlink" title="15.点击【完成】。"></a>15.点击【完成】。</h5><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/15.png" alt="图片"></p>
+<h2 id="二、虚拟机内安装Mac系统"><a href="#二、虚拟机内安装Mac系统" class="headerlink" title="二、虚拟机内安装Mac系统"></a>二、虚拟机内安装Mac系统</h2><h5 id="16-解锁VM"><a href="#16-解锁VM" class="headerlink" title="16.解锁VM"></a>16.解锁VM</h5><h6 id="16-1-解锁VM-支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装"><a href="#16-1-解锁VM-支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装" class="headerlink" title="16.1.解锁VM,支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装"></a>16.1.解锁VM,支持安装Mac系统，在官网发布的VM虚拟机上，是不支持安装Mac的系统的，可以通过解锁VM的方式，支持安装</h6><h6 id="16-2-首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功"><a href="#16-2-首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功" class="headerlink" title="16.2.首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功"></a>16.2.首先将电脑重启以确保关闭电脑运行的所有有关虚拟机的进程，或者打开任务管理器，关闭所有VM的进程，若不结束，则导致解锁不成功</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/16.png" alt="图片"></p>
+<h6 id="16-3-打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭"><a href="#16-3-打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭" class="headerlink" title="16.3.打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭"></a>16.3.打开解锁用的文件夹，下面有几个Cmd命令文件，选择win-install脚本右键选择”以管理员身份运行”，cmd会自动执行脚本，执行结束后自动关闭</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/17.png" alt="图片"></p>
+<h5 id="17-在虚拟机上安装Mac系统"><a href="#17-在虚拟机上安装Mac系统" class="headerlink" title="17.在虚拟机上安装Mac系统"></a>17.在虚拟机上安装Mac系统</h5><h6 id="17-1-第一步，选择“创建新的虚拟机”"><a href="#17-1-第一步，选择“创建新的虚拟机”" class="headerlink" title="17.1.第一步，选择“创建新的虚拟机”"></a>17.1.第一步，选择“创建新的虚拟机”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/18.png" alt="图片"></p>
+<h6 id="17-2-第二步，选择“典型”，点击“下一步”"><a href="#17-2-第二步，选择“典型”，点击“下一步”" class="headerlink" title="17.2.第二步，选择“典型”，点击“下一步”"></a>17.2.第二步，选择“典型”，点击“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/19.png" alt="图片"></p>
+<h6 id="17-3-选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”"><a href="#17-3-选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”" class="headerlink" title="17.3.选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”"></a>17.3.选择”镜像安装”，点击”浏览”，找到镜像所在的文件夹，将浏览的文件的格式修改为所有文件，点击”下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/20.png" alt="图片"></p>
+<h6 id="17-4-选择Mac的操作系统，选择“macOS-10-14”版本，选择“下一步”"><a href="#17-4-选择Mac的操作系统，选择“macOS-10-14”版本，选择“下一步”" class="headerlink" title="17.4.选择Mac的操作系统，选择“macOS 10.14”版本，选择“下一步”"></a>17.4.选择Mac的操作系统，选择“macOS 10.14”版本，选择“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/21.png" alt="图片"></p>
+<h6 id="17-5-选择系统安装的磁盘，点击“下一步”"><a href="#17-5-选择系统安装的磁盘，点击“下一步”" class="headerlink" title="17.5.选择系统安装的磁盘，点击“下一步”"></a>17.5.选择系统安装的磁盘，点击“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/22.png" alt="图片"></p>
+<h6 id="17-6-根据磁盘的大小，设置给该系统分配的大小，选择“下一步”"><a href="#17-6-根据磁盘的大小，设置给该系统分配的大小，选择“下一步”" class="headerlink" title="17.6.根据磁盘的大小，设置给该系统分配的大小，选择“下一步”"></a>17.6.根据磁盘的大小，设置给该系统分配的大小，选择“下一步”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/23.png" alt="图片"></p>
+<h6 id="17-7-可以根据电脑的配置，设置合适的硬件设备的资源分配"><a href="#17-7-可以根据电脑的配置，设置合适的硬件设备的资源分配" class="headerlink" title="17.7.可以根据电脑的配置，设置合适的硬件设备的资源分配"></a>17.7.可以根据电脑的配置，设置合适的硬件设备的资源分配</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/24.png" alt="图片"></p>
+<h6 id="17-8-在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的"><a href="#17-8-在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的" class="headerlink" title="17.8.在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的"></a>17.8.在安装时，将系统的网络适配器的网络连接模式设置为”桥接模式”并勾选”复制物理网络连接状态”，这样虚拟机内的系统也是能上网的</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/25.png" alt="图片"></p>
+<h6 id="17-9-设置USB控制器，将USB兼容性更改为：USB-2-0-显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示"><a href="#17-9-设置USB控制器，将USB兼容性更改为：USB-2-0-显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示" class="headerlink" title="17.9.设置USB控制器，将USB兼容性更改为：USB 2.0,显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示"></a>17.9.设置USB控制器，将USB兼容性更改为：USB 2.0,显示所有USB输入设备，这样在通过USB连接真机时，也会在虚拟机的操作系统上显示</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/26.png" alt="图片"></p>
+<h6 id="17-10-开启虚拟机，在磁盘上安装Mac的操作系统"><a href="#17-10-开启虚拟机，在磁盘上安装Mac的操作系统" class="headerlink" title="17.10.开启虚拟机，在磁盘上安装Mac的操作系统"></a>17.10.开启虚拟机，在磁盘上安装Mac的操作系统</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/27.png" alt="图片"><br><font color="red">注意：20G磁盘容量太小，应将磁盘设置最小40G</font></p>
+<h6 id="17-11-语言选择“简体中文”，点击“右指向”"><a href="#17-11-语言选择“简体中文”，点击“右指向”" class="headerlink" title="17.11.语言选择“简体中文”，点击“右指向”"></a>17.11.语言选择“简体中文”，点击“右指向”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/28.png" alt="图片"></p>
+<h6 id="17-12-前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”"><a href="#17-12-前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”" class="headerlink" title="17.12.前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”"></a>17.12.前一个界面选择”继续”，到本界面，选择”继续”，点击“同意”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/29.png" alt="图片"></p>
+<h6 id="17-13-选择“使用工具”，“磁盘工具”"><a href="#17-13-选择“使用工具”，“磁盘工具”" class="headerlink" title="17.13.选择“使用工具”，“磁盘工具”"></a>17.13.选择“使用工具”，“磁盘工具”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/30.png" alt="图片"></p>
+<h6 id="17-14-选择在安装时给系统分配的磁盘，选择”抹掉”-将磁盘转换成Mac识别的格式"><a href="#17-14-选择在安装时给系统分配的磁盘，选择”抹掉”-将磁盘转换成Mac识别的格式" class="headerlink" title="17.14.选择在安装时给系统分配的磁盘，选择”抹掉”,将磁盘转换成Mac识别的格式"></a>17.14.选择在安装时给系统分配的磁盘，选择”抹掉”,将磁盘转换成Mac识别的格式</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/31.png" alt="图片"></p>
+<h6 id="17-15-格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“"><a href="#17-15-格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“" class="headerlink" title="17.15.格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“"></a>17.15.格式化磁盘后，选择”磁盘工具”，点击”退出磁盘工具“</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/32.png" alt="图片"></p>
+<h6 id="17-16-选择刚格式化的磁盘，点击“继续”"><a href="#17-16-选择刚格式化的磁盘，点击“继续”" class="headerlink" title="17.16.选择刚格式化的磁盘，点击“继续”"></a>17.16.选择刚格式化的磁盘，点击“继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/33.png" alt="图片"></p>
+<h6 id="17-17-等待安装"><a href="#17-17-等待安装" class="headerlink" title="17.17.等待安装"></a>17.17.等待安装</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/34.png" alt="图片"></p>
+<h6 id="17-18-安装结束后，地区选择”中国”，点击”继续”"><a href="#17-18-安装结束后，地区选择”中国”，点击”继续”" class="headerlink" title="17.18.安装结束后，地区选择”中国”，点击”继续”;"></a>17.18.安装结束后，地区选择”中国”，点击”继续”;</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/35.png" alt="图片"></p>
+<h6 id="17-19-键盘配置，选择”继续”"><a href="#17-19-键盘配置，选择”继续”" class="headerlink" title="17.19.键盘配置，选择”继续”"></a>17.19.键盘配置，选择”继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/36.png" alt="图片"></p>
+<h6 id="17-20-选择”不传输任何数据”-选择”继续”"><a href="#17-20-选择”不传输任何数据”-选择”继续”" class="headerlink" title="17.20.选择”不传输任何数据”,选择”继续”"></a>17.20.选择”不传输任何数据”,选择”继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/37.png" alt="图片"></p>
+<h6 id="17-21-登陆苹果ID-若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“"><a href="#17-21-登陆苹果ID-若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“" class="headerlink" title="17.21.登陆苹果ID,若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“"></a>17.21.登陆苹果ID,若有ID，则输入ID后，选择”继续“，若无，选择”稍后设置“</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/38.png" alt="图片"></p>
+<h6 id="17-22-创建电脑账户，密码设置不少于4位-2080-选择”继续”"><a href="#17-22-创建电脑账户，密码设置不少于4位-2080-选择”继续”" class="headerlink" title="17.22.创建电脑账户，密码设置不少于4位(2080),选择”继续”"></a>17.22.创建电脑账户，密码设置不少于4位(2080),选择”继续”</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/39.png" alt="图片"></p>
+<h6 id="17-23-将桌面上的系统盘推出"><a href="#17-23-将桌面上的系统盘推出" class="headerlink" title="17.23.将桌面上的系统盘推出"></a>17.23.将桌面上的系统盘推出</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/40.png" alt="图片"></p>
+<h5 id="18-解决Mac系统分辨率率较低问题"><a href="#18-解决Mac系统分辨率率较低问题" class="headerlink" title="18.解决Mac系统分辨率率较低问题"></a>18.解决Mac系统分辨率率较低问题</h5><h6 id="18-1-安装VMware-Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，"><a href="#18-1-安装VMware-Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，" class="headerlink" title="18.1.安装VMware Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，"></a>18.1.安装VMware Tools工具，在虚拟机中的Mac系统中，直接使用虚拟机上提供的工具会影响Mac系统的分辨率，</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/41.png" alt="图片"></p>
+<h6 id="18-2-另外下载文件并安装-底部网盘链接"><a href="#18-2-另外下载文件并安装-底部网盘链接" class="headerlink" title="18.2.另外下载文件并安装(底部网盘链接)"></a>18.2.另外下载文件并安装(底部网盘链接)</h6><p><img src="https://raw.githubusercontent.com/xy2080/1213/1-5/42.png" alt="图片"></p>
+<blockquote>
+<p>Mac系统下载地址：链接：<a href="https://pan.baidu.com/s/1ImTLwIIf5zt2VNzL8oYeJA" target="_blank" rel="noopener">https://pan.baidu.com/s/1ImTLwIIf5zt2VNzL8oYeJA</a><br>提取码：cjoo</p>
+</blockquote>
+<blockquote>
+<p>VM Tools工具下载：链接：<a href="https://pan.baidu.com/s/1WVcX4lXGAbO3GD6Uipm1NQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1WVcX4lXGAbO3GD6Uipm1NQ</a><br>提取码：m06a<br>复制这段内容后打开百度网盘手机App，操作更方便哦</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="2080 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="2080 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/VM/" rel="tag"># VM</a>
+              <a href="/tags/Mac/" rel="tag"># Mac</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/02/%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%9B%91%E5%90%AC%E4%B8%8E%E5%B9%BF%E6%92%AD/" rel="prev" title="事件的监听与广播">
+      <i class="fa fa-chevron-left"></i> 事件的监听与广播
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装虚拟机"><span class="nav-text">一、安装虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、虚拟机内安装Mac系统"><span class="nav-text">二、虚拟机内安装Mac系统</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="2080"
+      src="https://raw.githubusercontent.com/xy2080/1213/1-2/1213.png">
+  <p class="site-author-name" itemprop="name">2080</p>
+  <div class="site-description" itemprop="description">翟喜悦叫爸爸</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xy2080" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xy2080" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2226822070@qq.com" title="E-Mail → mailto:2226822070@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2226822070&site=qq&menu=yes" title="Q Q → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2226822070&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>Q Q</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/%E6%B2%A1%E6%B2%A1%E6%B2%A1%E6%B2%A13711" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;没没没没3711" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-linkedin-square"></i>
+      推荐阅读
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/Unity" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;Unity">Unity</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/Lua" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;Lua">Lua</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/VR" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;VR">VR</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+       <div id="music163player">
+       <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33911781&auto=1&height=66">
+        </iframe>
+       </div>
+    </div>
+  
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2080</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/xxw/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/xxw/anime.min.js"></script>
+  <script src="/xxw/velocity/velocity.min.js"></script>
+  <script src="/xxw/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'i7GPtg0c6M8cs1fh69auRl6y-gzGzoHsz',
+    appKey: 'CI8TERh8I48DbazNrCfMgH4J',
+    placeholder: "留下点东西吧...",
+    avatar: 'mp',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
+<script type="text/javascript" src="/js/clicklove.js"></script>

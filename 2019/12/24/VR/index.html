@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/xxw/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/xxw/pace/pace-theme-pace-theme-center-atom.min.css">
+  <script src="/xxw/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="前言 VR是Virtual Reality的缩写，中文的意思就是虚拟现实，早期译为“灵境技术”。虚拟现实是多媒体技术的终极应用形式，它是计算机软硬件技术、传感技术、机器人技术、人工智能及行为心理学等科学领域飞速发展的结晶。主要依赖于三维实时图形显示、三维定位跟踪、触觉及嗅觉传感技术、人工智能技术、高速计算与并行计算技术以及人的行为学研究等多项关键技术的发展。随着虚拟现实技术的发展，真正地实现虚拟现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VR">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;24&#x2F;VR&#x2F;index.html">
+<meta property="og:site_name" content="2080">
+<meta property="og:description" content="前言 VR是Virtual Reality的缩写，中文的意思就是虚拟现实，早期译为“灵境技术”。虚拟现实是多媒体技术的终极应用形式，它是计算机软硬件技术、传感技术、机器人技术、人工智能及行为心理学等科学领域飞速发展的结晶。主要依赖于三维实时图形显示、三维定位跟踪、触觉及嗅觉传感技术、人工智能技术、高速计算与并行计算技术以及人的行为学研究等多项关键技术的发展。随着虚拟现实技术的发展，真正地实现虚拟现">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-24T02:20:24.699Z">
+<meta property="article:modified_time" content="2020-01-07T09:14:55.543Z">
+<meta property="article:author" content="2080">
+<meta property="article:tag" content="VR">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2019/12/24/VR/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>VR | 2080</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">2080</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">执手此生，伴君行</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/VR/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/xy2080/1213/1-2/1213.png">
+      <meta itemprop="name" content="2080">
+      <meta itemprop="description" content="翟喜悦叫爸爸">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="2080">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VR
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-24 10:20:24" itemprop="dateCreated datePublished" datetime="2019-12-24T10:20:24+08:00">2019-12-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-07 17:14:55" itemprop="dateModified" datetime="2020-01-07T17:14:55+08:00">2020-01-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/VR/" itemprop="url" rel="index">
+                    <span itemprop="name">VR</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              <span>992</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>VR是Virtual Reality的缩写，中文的意思就是虚拟现实，早期译为“灵境技术”。虚拟现实是多媒体技术的终极应用形式，它是计算机软硬件技术、传感技术、机器人技术、人工智能及行为心理学等科学领域飞速发展的结晶。主要依赖于三维实时图形显示、三维定位跟踪、触觉及嗅觉传感技术、人工智能技术、高速计算与并行计算技术以及人的行为学研究等多项关键技术的发展。随着虚拟现实技术的发展，真正地实现虚拟现实，将引起整个人类生活与发展的很大变革。人们戴上立体眼镜、数据手套等特制的传感设备，面对一种三维的模拟现实，似乎置身于一个具有三维的视觉、听觉、触觉甚至嗅觉的感觉世界，并且人与这个环境可以通过人的自然技能和相应的设施进行信息交互。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="1-诞生"><a href="#1-诞生" class="headerlink" title="1.诞生"></a>1.诞生</h3><blockquote>
+<p>在此之前，虚拟现实的概念早在二十世纪六十年代已经存在，但是并没有运用到游戏技术里，直到现代的硬件设备足以支持后，最早在某论坛由后来的Oculus开发人员、shenx、著名的吃豆人开发者岩谷彻等人提出</p>
+</blockquote>
+<h3 id="2-”爆发式”发展"><a href="#2-”爆发式”发展" class="headerlink" title="2.”爆发式”发展"></a>2.”爆发式”发展</h3><blockquote>
+<p>2016 年被行业和媒体称为 VR 爆发的元年，包括游戏、应用、影视和直播等内容的创作开发资源源源不断地进入这个行业，到处都彰显着这个行业会在未来一段时间里井喷式发展。</p>
+</blockquote>
+<h3 id="3-VR游戏的曙光"><a href="#3-VR游戏的曙光" class="headerlink" title="3.VR游戏的曙光"></a>3.VR游戏的曙光</h3><blockquote>
+<p>2018年虚拟现实、增强现实和MR gaming的合并带来了66亿美元的收入。在同一时期，游戏产业作为一个整体创造了近1350亿美元的收入。但是，2019年发售的绝大多数游戏无论是新发行的游戏还是消费者买单的游戏都是非VR游戏。从一些数据上来看，未来还是可期的，今年3月，索尼宣布已售出420万台PlayStation VR头盔。截至今年夏天，PlayStation 4的销量已超过1亿台。</p>
+</blockquote>
+<h3 id="4-VR游戏优缺点"><a href="#4-VR游戏优缺点" class="headerlink" title="4.VR游戏优缺点"></a>4.VR游戏优缺点</h3><blockquote>
+<p>优点：沉浸感强、互动性强、新颖有科技感。<br>劣势：VR资源较少、设备昂贵、使用场景限制、眩晕感。</p>
+</blockquote>
+<h3 id="5-VR游戏的前景"><a href="#5-VR游戏的前景" class="headerlink" title="5.VR游戏的前景"></a>5.VR游戏的前景</h3><blockquote>
+<p>有业内人士预计，到2020年VR游戏玩家数量将达到7000万，2025年VR游戏玩家数量将达到2.16亿。虽然目前VR游戏发展还不成熟，甚至没有特别优秀的VR游戏作品，VR游戏在技术、设备和用户体验上还有很长的路要走，但是这个市场的潜力是巨大的，如果现在能抓住时机，那么在未来的市场发展中一定会站稳脚跟！</p>
+</blockquote>
+<h3 id="6-VR技术的应用"><a href="#6-VR技术的应用" class="headerlink" title="6.VR技术的应用"></a>6.VR技术的应用</h3><pre><code>VR+军事
+VR+医疗
+VR+教育
+VR+犯罪现场
+VR+城市规划
+VR+房地产
+VR+旅游
+VR+新闻
+VR+影视
+VR+直播
+VR+游戏</code></pre>
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="2080 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="2080 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/VR/" rel="tag"># VR</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/23/XLua%E5%85%A5%E9%97%A8/" rel="prev" title="XLua入门">
+      <i class="fa fa-chevron-left"></i> XLua入门
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/24/Unity/" rel="next" title="Unity">
+      Unity <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-诞生"><span class="nav-text">1.诞生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-”爆发式”发展"><span class="nav-text">2.”爆发式”发展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-VR游戏的曙光"><span class="nav-text">3.VR游戏的曙光</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-VR游戏优缺点"><span class="nav-text">4.VR游戏优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-VR游戏的前景"><span class="nav-text">5.VR游戏的前景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-VR技术的应用"><span class="nav-text">6.VR技术的应用</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="2080"
+      src="https://raw.githubusercontent.com/xy2080/1213/1-2/1213.png">
+  <p class="site-author-name" itemprop="name">2080</p>
+  <div class="site-description" itemprop="description">翟喜悦叫爸爸</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xy2080" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xy2080" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2226822070@qq.com" title="E-Mail → mailto:2226822070@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2226822070&site=qq&menu=yes" title="Q Q → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2226822070&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>Q Q</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/%E6%B2%A1%E6%B2%A1%E6%B2%A1%E6%B2%A13711" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;没没没没3711" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-linkedin-square"></i>
+      推荐阅读
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/Unity" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;Unity">Unity</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/Lua" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;Lua">Lua</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/2019/12/24/VR" title="&#x2F;2019&#x2F;12&#x2F;24&#x2F;VR">VR</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+       <div id="music163player">
+       <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33911781&auto=1&height=66">
+        </iframe>
+       </div>
+    </div>
+  
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2080</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.1.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/xxw/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/xxw/anime.min.js"></script>
+  <script src="/xxw/velocity/velocity.min.js"></script>
+  <script src="/xxw/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'i7GPtg0c6M8cs1fh69auRl6y-gzGzoHsz',
+    appKey: 'CI8TERh8I48DbazNrCfMgH4J',
+    placeholder: "留下点东西吧...",
+    avatar: 'mp',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
+<script type="text/javascript" src="/js/clicklove.js"></script>
